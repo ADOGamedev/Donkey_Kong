@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.99787, 1.26912 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1.28572, 8.92857 )
+
+[node name="hammer" type="Area2D"]
+scale = Vector2( 1.75, 1.75 )
+z_index = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -8.92857 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 13.5, 4.35714 )
+shape = SubResource( 2 )

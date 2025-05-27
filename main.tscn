@@ -1,0 +1,74 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://first_barrel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://main.gd" type="Script" id=4]
+[ext_resource path="res://ui.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fire_guy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://fire_guy.gd" type="Script" id=7]
+[ext_resource path="res://first_barrel.gd" type="Script" id=8]
+[ext_resource path="res://sounds/jump.wav" type="AudioStream" id=9]
+[ext_resource path="res://sounds/points.wav" type="AudioStream" id=10]
+[ext_resource path="res://sounds/footsteps.WAV" type="AudioStream" id=11]
+[ext_resource path="res://sounds/die_sound.wav" type="AudioStream" id=12]
+[ext_resource path="res://hammer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://sounds/normal_bg_music.wav" type="AudioStream" id=14]
+[ext_resource path="res://sounds/hammer_music.wav" type="AudioStream" id=15]
+[ext_resource path="res://sounds/winning_sound.wav" type="AudioStream" id=16]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464.745, 570.768 )
+collision_layer = 31
+collision_mask = 31
+
+[node name="ui" parent="." instance=ExtResource( 5 )]
+margin_top = 61.924
+margin_bottom = 61.924
+
+[node name="fire_guy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 511.918, 550.394 )
+scale = Vector2( 1.2, 1.2 )
+script = ExtResource( 7 )
+
+[node name="first_barrel" parent="." instance=ExtResource( 3 )]
+position = Vector2( 525.387, 128.512 )
+gravity_scale = 5.0
+contacts_reported = 10000
+script = ExtResource( 8 )
+
+[node name="sounds" type="Node2D" parent="."]
+
+[node name="jump" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 9 )
+volume_db = -9.088
+
+[node name="points" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 10 )
+volume_db = -12.117
+
+[node name="footsteps" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 11 )
+volume_db = -15.146
+
+[node name="die" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 12 )
+volume_db = -11.107
+
+[node name="normal_bg_music" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 14 )
+volume_db = 3.03
+
+[node name="hammer_music" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 15 )
+volume_db = 3.029
+
+[node name="winning_music" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource( 16 )
+
+[node name="hammer" parent="." instance=ExtResource( 13 )]
+
+[node name="level" parent="." instance=ExtResource( 1 )]
