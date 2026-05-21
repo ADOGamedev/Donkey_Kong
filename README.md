@@ -8,8 +8,8 @@
 - **Space**: jump.
 
 - **S**: when you are above a (not-broken) lader, press S to climb it downwards.
-    > [!WARNING]
-    > It might be a little buggy, so don't mess too much with it 😅
+> [!WARNING]
+> It might be a little buggy, so don't mess too much with it 😅
 
 - **W**: when you are below a lader, press W to climb it.
 
