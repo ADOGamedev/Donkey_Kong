@@ -69,32 +69,32 @@ atlas = ExtResource( 12 )
 region = Rect2( 0, 33, 34, 33 )
 
 [sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 15 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 34, 33 )
 
 [sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 15 )
-region = Rect2( 0, 33, 34, 33 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 34, 33 )
-
-[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 3 )
 region = Rect2( 34, 0, 34, 33 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 33, 34, 33 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 3 )
 region = Rect2( 34, 33, 34, 33 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 66, 34, 33 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 34, 33 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 33, 34, 33 )
 
 [sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 10 )
@@ -140,15 +140,15 @@ animations = [ {
 "name": "kong_angry",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ) ],
-"loop": true,
-"name": "kong_laughing",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "left_right",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "kong_laughing",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
@@ -179,7 +179,7 @@ animations = [ {
 extents = Vector2( 3.52409, 0.371155 )
 
 [sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 4.54216, 1.12598 )
+extents = Vector2( 6.59657, 9.46857 )
 
 [sub_resource type="RectangleShape2D" id=34]
 extents = Vector2( 8.23178, 12.3525 )
@@ -358,14 +358,14 @@ z_index = -1
 texture = ExtResource( 6 )
 
 [node name="dk" type="AnimatedSprite" parent="."]
-position = Vector2( 475.241, 97.1169 )
+position = Vector2( 475.054, 98.2406 )
 scale = Vector2( 2.6, 2.6 )
 frames = SubResource( 27 )
 animation = "kong_laughing"
 playing = true
 
 [node name="barrels_tower" type="Sprite" parent="dk"]
-position = Vector2( 35.1849, 0.863434 )
+position = Vector2( 35.1129, 1.07953 )
 texture = ExtResource( 8 )
 
 [node name="broken_ladder_fixers" type="Node2D" parent="."]
@@ -375,56 +375,56 @@ z_index = -4
 
 [node name="broken_lader_fixer" type="StaticBody2D" parent="broken_ladder_fixers"]
 position = Vector2( 388.363, 533.589 )
-collision_layer = 32
+collision_layer = 33
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer"]
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer2" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 216.834, 531.93 )
+position = Vector2( 217.675, 528.031 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer2"]
 position = Vector2( -0.208466, -3.63116 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer3" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 172.325, 448.718 )
+position = Vector2( 173.166, 437.748 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer3"]
 position = Vector2( 0, -6.10352e-05 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer4" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 333.758, 444.962 )
+position = Vector2( 334.599, 433.992 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer4"]
 position = Vector2( 0, -6.10352e-05 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer5" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 362.012, 362.984 )
+position = Vector2( 362.853, 352.014 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer5"]
 position = Vector2( 0, -6.10352e-05 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer6" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 193.291, 354.419 )
+position = Vector2( 194.132, 343.449 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer6"]
 position = Vector2( 0, -6.10352e-05 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer7" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 152.66, 273.931 )
+position = Vector2( 153.501, 262.961 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer7"]
 position = Vector2( 0, -6.10352e-05 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer8" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 353.814, 184.207 )
+position = Vector2( 354.655, 173.237 )
 collision_layer = 32
 collision_mask = 32
 
@@ -433,7 +433,7 @@ position = Vector2( 0, -6.10352e-05 )
 shape = SubResource( 28 )
 
 [node name="broken_lader_fixer9" type="StaticBody2D" parent="broken_ladder_fixers"]
-position = Vector2( 182.068, 183.729 )
+position = Vector2( 182.909, 172.759 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="broken_ladder_fixers/broken_lader_fixer9"]
 position = Vector2( 0, -6.10352e-05 )
@@ -455,8 +455,11 @@ collision_mask = 7
 shape = SubResource( 32 )
 
 [node name="Area2D" type="Area2D" parent="oil/OilFire"]
+collision_layer = 80
+collision_mask = 65
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="oil/OilFire/Area2D"]
+position = Vector2( -0.92746, -0.262787 )
 shape = SubResource( 33 )
 
 [node name="bg" type="Sprite" parent="."]
@@ -941,6 +944,22 @@ collision_layer = 64
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls/wall"]
+position = Vector2( 31.4778, 348.657 )
+shape = SubResource( 39 )
+
+[node name="wall3" type="StaticBody2D" parent="walls"]
+position = Vector2( -33.6358, -2.52269 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/wall3"]
+position = Vector2( 31.4778, 348.657 )
+shape = SubResource( 39 )
+
+[node name="wall4" type="StaticBody2D" parent="walls"]
+position = Vector2( 544.901, 34.4767 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/wall4"]
 position = Vector2( 31.4778, 348.657 )
 shape = SubResource( 39 )
 

@@ -33,7 +33,7 @@ func _ready():
 			left_right_executable = true
 		
 			randomize()
-			var random_num = random_generator.randf_range(1.1, 2.2) 
+			var random_num = random_generator.randf_range(1.5, 3.0) 
 			
 			#Throwing barrel animation
 			$level/dk.frame = 0
@@ -92,7 +92,8 @@ func _physics_process(delta):
 				left_right_executable = false
 		
 		$ui/points.text = "Points: \n" + str(player.points)
-		barrels_trought_ladders()
+		
+	barrels_trought_ladders()
 		
 		
 	if Global.easter_egg and one_time_exe:

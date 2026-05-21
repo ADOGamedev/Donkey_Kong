@@ -29,8 +29,6 @@ func _ready():
 		
 func _physics_process(delta):
 	
-	print(ladder_down)
-	
 	progress_bar.value = $hammer_timer.time_left * 10
 	
 	if has_hammer:
@@ -260,7 +258,7 @@ func get_input_ladder_climbing_detection():
 	if ray.is_colliding():
 		ladder = true
 		
-	if $ladder_down.is_colliding() and $ladder_down.get_collider().get_parent().get_parent().get_parent().name == "ladders":
+	if $ladder_down.is_colliding() and $ladder_down.get_collider().get_parent().get_parent().name.begins_with("normal_ladder"):
 		ladder_down = true
 	else:
 		ladder_down = false
@@ -315,6 +313,7 @@ func get_input_laddering():
 			else:
 				$CollisionShape2D.disabled = false
 			velocity.y = 50
+			velocity.x = 0
 			if animation != "climbing":
 				animation = "laddering"
 			animations.playing = true
